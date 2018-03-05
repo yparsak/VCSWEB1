@@ -28,3 +28,5 @@ The format is:
 <type>success</type>
 </Response>
 ```
+
+To configure: you must modify Web.config and set ConStr (Connection String) variable.
