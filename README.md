@@ -15,7 +15,7 @@ C# WEB project that uses MVC and API frameworks. The MVC only has a default page
 
 The API calls stored procedure using parameters described above. The result is returned as an XML document.
 
-The format is:
+The format for stored procedure, and query response is:
 
 ```
 <Response>
@@ -35,5 +35,7 @@ The format is:
 <type>success</type>
 </Response>
 ```
+
+The command response doesn't contain the data node.
 
 To configure: you must modify Web.config and set ConStr (Connection String) variable.
