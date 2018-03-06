@@ -50,6 +50,7 @@ namespace VCSWEB1.Controllers
                 else if (command != "")
                 {
                     // ignored, if stored_procedure is set
+                    command = command.Replace("+"," ");
                     int rows_affected = DBConn.ExecNonQuery(command);
                     response.type = "success";
                     response.status = rows_affected.ToString()+" rows affected";
@@ -58,6 +59,7 @@ namespace VCSWEB1.Controllers
                 else if (query != "")
                 {
                     //ignored, if either stored_procedure or command is set.
+                    query = query.Replace("+"," ");
                     DataTable dt = DBConn.ExecQuery(query);
                     response.build_data(dt);
                     response.type = "success";
